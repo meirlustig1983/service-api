@@ -14,14 +14,14 @@ public class ServiceApiController {
     @GetMapping("/helloWorld")
     public String helloWorld() {
         String msg = "Hello, World!";
-        log.info("execute 'serviceapi' HTTP request. type: '{}' name: '{}', msg: {}", HttpMethod.POST, "helloWorld", msg);
+        log.info("execute 'serviceapi' HTTP request. type: '{}' name: '{}', msg: {}", HttpMethod.GET, "helloWorld", msg);
         return msg;
     }
 
     @GetMapping("/greet")
     public String greet(@RequestParam(value = "name", defaultValue = "World") String name) {
         String msg = "Hello, " + name + "!";
-        log.info("execute 'serviceapi' HTTP request. type: '{}' name: '{}', msg: {}", HttpMethod.POST, "helloWorld", msg);
+        log.info("execute 'serviceapi' HTTP request. type: '{}' name: '{}', msg: {}", HttpMethod.GET, "helloWorld", msg);
         return msg;
     }
 
